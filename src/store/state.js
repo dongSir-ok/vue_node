@@ -3,7 +3,8 @@ export default{
     bFooter : true,
     home : [],
     detail : {},
-    // column : [],
+    columns : [],//书架集合
+    column : {},//插入书架信息
     user : {
         err : 1,
         msg : '未登录'

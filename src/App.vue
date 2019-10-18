@@ -26,7 +26,7 @@ export default {
         this.$store.dispatch(VIEW_HEADER,false);
         this.$store.dispatch(VIEW_FOOTER,true);
       }
-      if(/login|reg|detail/.test(path)){
+      if(/login|reg|detail|shaky/.test(path)){
         // this.$root.$data.bSearch = false;
         // this.$root.$data.bFooter = false;
         this.$store.dispatch(VIEW_HEADER,false);

@@ -127,16 +127,6 @@ export default {
         DivHeight
     },
     props : ['listData','dataName'],
-    // mounted(){
-    //     console.log(this.listData);
-    //     for(let i=0;i<this.listData.length;i++){
-    //         this.ss = 
-    //         this.myIcon.push(this.ss);
-    //         // this.b = require(this.myIcon);
-    //     };
-    //     console.log(this.myIcon);
-        
-    // }
 }
 </script>
 <style scoped>
@@ -177,6 +167,6 @@ text-align:left;margin-bottom: 0.12rem;}
 .aui-list-theme-img img{width:100%;height:auto;display:auto;}
 .aui-list-theme-message{padding:0.1rem 0;}
 .aui-list-theme-title{color: #333;font-size: 0.15rem;margin: 0.1rem 0;overflow: hidden;display: -webkit-box;
-    -webkit-line-clamp: 2;word-break: break-all;font-weight: normal;text-overflow: ellipsis;}
+    -webkit-line-clamp: 2;word-break: break-all;font-weight: normal;text-overflow: ellipsis;text-align:left;}
 .aui-list-theme-message p{font-size:0.2rem;text-align: left;color:#feb249;}
 </style>

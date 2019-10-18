@@ -1,7 +1,7 @@
 <template>
 <div class="place">
     <DivHeight></DivHeight>
-    <div class="aui-place">
+    <div class="aui-place" @click="tip">
         <a href="javascript:;" class="aui-place-grid aui-place-one">
             <div class="aui-place-grid-icon">
                 <img src="../assets/img/nav-001.png" alt="图片"/>
@@ -72,6 +72,11 @@
 <script>
 import DivHeight from '../components/divHeight'
 export default {
+    methods : {
+        tip(){
+            alert('功能暂未完善');
+        }
+    },
     components:{
         DivHeight
     }

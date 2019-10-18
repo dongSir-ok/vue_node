@@ -67,8 +67,8 @@ export default {
         )
       },
       back(){
-          window.history.go(-1);
-        // this.$router.go(-1);
+        //   window.history.go(-1);
+        this.$router.go(-1);
       },
       clear1(){
             this.username = "";

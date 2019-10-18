@@ -7,6 +7,8 @@ import router from './plugins/router';
 import store from './plugins/store'
 import './plugins/axios';
 
+
+
 export default new Vue({
   // data:{
   //   bSearch : true,

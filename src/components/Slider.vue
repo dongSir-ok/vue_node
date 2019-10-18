@@ -3,20 +3,20 @@
     <ul class="clearfix">
 
       <router-link
-        to="/detail/1"
+        to="/shaky"
         tag="li"
       >
         <img src="/images/banner_1.png" alt=""/>
       </router-link>
 
       <router-link
-        to="/detail/2"
+        to="/shaky"
         tag="li"
       >
         <img src="/images/banner_2.png" alt=""/>
       </router-link>
       <router-link
-        to="/detail/3"
+        to="/shaky"
         tag="li"
       >
         <img src="/images/banner_3.png" alt=""/>
@@ -39,7 +39,7 @@ export default {
         $('.banner ol li').removeClass('active');
         $('.banner ol li').eq(index).addClass('active');
       }
-    })
+    });
   }
 }
 </script>

@@ -15,7 +15,8 @@
       <ul>
         <li class="gk-text">
           <i></i>
-          <p>我的书架</p>
+          <!-- <p to='/column'>我的书架</p> -->
+          <router-link to="/column" class="p">我的书架</router-link>
           <b></b>
         </li>
         <li class="mm-text">
@@ -35,7 +36,8 @@
         </li>
         <li class="sc-text">
           <i></i>
-          <p>关于我们</p>
+          <!-- <p>关于我们</p> -->
+          <router-link to="/about" class="p">关于我们</router-link>
           <b></b>
         </li>
       </ul>
@@ -98,7 +100,7 @@ font-size: 0.3rem;color:#fff;position:fixed;line-height: 0.4rem;top:0;left:0;z-i
 
 
 .docList ul .gk-text i{width:0.37rem;height:0.37rem; background-size:100%; float:left; margin-left:0.29rem; margin-top:0.24rem;}
-.gk-text p{ float:left; font-size:0.25rem;margin-left:0.1rem; margin-top:0.25rem;}
+.gk-text .p{ float:left; font-size:0.25rem;margin-left:0.1rem; margin-top:0.25rem;}
 .gk-text i{background:url('../assets/img/book.png') no-repeat center;background-size:0.44rem;}
 .docList ul .mm-text i{width:0.29rem;height:0.35rem; background-size:100%; float:left; margin-left:0.32rem; margin-top:0.24rem;}
 .mm-text p{ float:left; font-size:0.25rem;margin-left:0.15rem; margin-top:0.25rem;}
@@ -107,7 +109,7 @@ font-size: 0.3rem;color:#fff;position:fixed;line-height: 0.4rem;top:0;left:0;z-i
 .cg-text p{ float:left; font-size:0.25rem;margin-left:0.1rem; margin-top:0.25rem;}
 .cg-text i{background:url('../assets/img/message.png') no-repeat center;background-size:0.5rem;}
 .docList ul .sc-text i{width:0.37rem;height:0.37rem; background-size:100%; float:left; margin-left:0.29rem; margin-top:0.24rem;}
-.sc-text p{ float:left; font-size:0.25rem;margin-left:0.1rem; margin-top:0.25rem;}
+.sc-text .p{ float:left; font-size:0.25rem;margin-left:0.1rem; margin-top:0.25rem;}
 .sc-text i{background:url('../assets/img/about_us.png') no-repeat center;background-size:0.5rem;}
 .docList ul .set-text i{width:0.37rem;height:0.37rem; background-size:100%; float:left; margin-left:0.29rem; margin-top:0.24rem;}
 .set-text p{ float:left; font-size:0.25rem;margin-left:0.1rem; margin-top:0.25rem;}

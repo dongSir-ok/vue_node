@@ -23,7 +23,7 @@
             <span>简介:</span>
             <em class="des">{{$store.state.detail[0].des}}</em>
         </div>
-        <div class="list">
+        <div class="list" @click="tip">
             <i class="icon icon-list"></i>
             <span>目录</span>
             <i class="icon icon-in"></i>
@@ -47,7 +47,7 @@
         <div class="footer">
             
             <div class="footer-car">
-                <span @click="add($store.state.detail[0]._id)">加入书架</span>
+                <span @click="add()">加入书架</span>
             </div>
             <div class="footer-buy">
                 <span>收藏</span>
@@ -62,19 +62,47 @@ export default {
         dataName:String,
     },
     methods : {
+        tip(){
+            alert('暂未完善');
+        },
         back(){
             this.$router.go(-1);
             // window.history.go(-1);
             // window.location.href = document.referrer;
         },
-        add(id){
-            console.log('获取乐',this.$store.state.detail);
+        add(){
+            let nickname = JSON.parse(window.localStorage.getItem('user')).data.nickname;
             let title = this.$store.state.detail[0].title;
-            let content = this.$store.state.detail[0].content;
-            let tip = this.$store.state.detail[0].tip;
+            let des = this.$store.state.detail[0].content;
             let icon = this.$store.state.detail[0].icon;
-            // this.$stroe.dispatch('UPDATE_STATE',{state});//用来调用修改数据是否加入书架的状态
-            // this.$store.dispatch('UPDATE_BOOK',{title,content,tip,icon});
+            let author = this.$store.state.detail[0].author;
+            let state = this.$store.state.detail[0].state;
+            let tip = this.$store.state.detail[0].tip;
+            this.$axios({
+                url : '/api/column',
+                method : 'post',
+                data : {
+                    title,
+                    nickname
+                }
+            }).then(
+                res=>{
+                    if(res.data.err === 0){
+                        this.$store.dispatch('UPDATE_BOOK',{tip,title,des,icon,author,state,nickname}).then(
+                            res=>{
+                                if(res.err === 0){
+                                    alert('加入书架成功');
+                                }else{
+                                    alert('加入书架失败');
+                                }
+                            }
+                        );
+                    }else{
+                        alert("已加入书架");
+                    }
+                }
+            )
+            // this.$store.dispatch('UPDATE_BOOK',{tip,title,des,icon,author,state});
         }
     },
     activated(){

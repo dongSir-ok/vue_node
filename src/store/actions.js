@@ -60,14 +60,26 @@ export default {
             res=>commit(types.UPDATE_DETAIL,res.data.data)
         )
     },
-    // [types.UPDATE_BOOK] : ({state,commit},payload)=>{
-    //     axios({
-    //         url : '/api/column',
-    //         method : 'post',
-    //         data : payload
-    //     }).then(
-    //         res=>commit(types.UPDATE_BOOK,res.data.data)
-    //     )
-    // }
+    [types.UPDATE_COLUMN] : ({state,commit},payload)=>{
+        axios({
+            url : '/api/column'
+        }).then(
+            res=>commit(types.UPDATE_COLUMN,res.data.data)
+        )
+    },
+    [types.UPDATE_BOOK] : ({state,commit},payload)=>{
+       return axios({
+            url : '/api/column',
+            method : 'put',
+            data : payload
+        }).then(
+            res=>{
+                commit(types.UPDATE_BOOK,res.data);
+                return {
+                    err : res.data.err
+                }
+            }
+        )
+    }
    
 }
